@@ -1,39 +1,44 @@
 <!-- Footer -->
+<head>
+  <link rel="stylesheet" href="/static/css/footer.css">
+</head>
+
+
 <footer class="page-footer font-small unique-color-dark">
 
-    <div style="background-color: #6351ce;">
+    <div style="background-color: #003450;">
       <div class="container">
   
         <!-- Grid row-->
         <div class="row py-4 d-flex align-items-center">
   
           <!-- Grid column -->
-          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-            <h6 class="mb-0">Get connected with us on social networks!</h6>
+          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0 text-light">
+            <h6 class="mb-0" style="font-size: 14px; font-family: sans-serif;">Get connected with us on social networks!</h6>
           </div>
           <!-- Grid column -->
   
           <!-- Grid column -->
-          <div class="col-md-6 col-lg-7 text-center text-md-right">
+          <div class="col-md-6 col-lg-7 text-center text-md-right text-light">
   
             <!-- Facebook -->
-            <a class="fb-ic">
+            <a class="fb-ic text-light" href="#">
               <i class="fab fa-facebook-f white-text mr-4"> </i>
             </a>
             <!-- Twitter -->
-            <a class="tw-ic">
+            <a class="tw-ic text-light" href="#">
               <i class="fab fa-twitter white-text mr-4"> </i>
             </a>
             <!-- Google +-->
-            <a class="gplus-ic">
+            <a class="gplus-ic text-light" href="#">
               <i class="fab fa-google-plus-g white-text mr-4"> </i>
             </a>
             <!--Linkedin -->
-            <a class="li-ic">
+            <a class="li-ic text-light" href="#">
               <i class="fab fa-linkedin-in white-text mr-4"> </i>
             </a>
             <!--Instagram-->
-            <a class="ins-ic">
+            <a class="ins-ic text-light" href="#">
               <i class="fab fa-instagram white-text"> </i>
             </a>
   
@@ -56,8 +61,7 @@
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
   
           <!-- Content -->
-          <h6 class="text-uppercase font-weight-bold">Company name</h6>
-          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <div class="logo"><a href="{{url_for('index')}}"><img src="/static/img/code_plateau-67dn.png" alt="logo" height="50"></a></div><hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
           <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
             consectetur
             adipisicing elit.</p>
@@ -69,19 +73,19 @@
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
   
           <!-- Links -->
-          <h6 class="text-uppercase font-weight-bold">Products</h6>
+          <h6 class="text-uppercase font-weight-bold" style="color: #003450;">Services</h6>
           <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
           <p>
-            <a href="#!">MDBootstrap</a>
+            <a href="#!">Tutorials</a>
           </p>
           <p>
-            <a href="#!">MDWordPress</a>
+            <a href="#!">Virtual Classes</a>
           </p>
           <p>
-            <a href="#!">BrandFlow</a>
+            <a href="#!">Live classes</a>
           </p>
           <p>
-            <a href="#!">Bootstrap Angular</a>
+            <a href="#!">Kids Tech</a>
           </p>
   
         </div>
@@ -91,19 +95,19 @@
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
   
           <!-- Links -->
-          <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+          <h6 class="text-uppercase font-weight-bold" style="color: #003450;">Useful links</h6>
           <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
           <p>
-            <a href="#!">Your Account</a>
+            <a  style="color: #003450; font-family: sans-serif; font-size: 14px;" href="{{url_for('index')}}">Home</a>
           </p>
           <p>
-            <a href="#!">Become an Affiliate</a>
+            <a href="{{url_for('register')}}">Become a Member</a>
           </p>
           <p>
-            <a href="#!">Shipping Rates</a>
+            <a href="{{url_for('login')}}">Account Area</a>
           </p>
           <p>
-            <a href="#!">Help</a>
+            <a href="{{url_for('contact')}}">Contact Us</a>
           </p>
   
         </div>
@@ -113,15 +117,15 @@
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
   
           <!-- Links -->
-          <h6 class="text-uppercase font-weight-bold">Contact</h6>
+          <h6 class="text-uppercase font-weight-bold" style="color: #003450;">Contact</h6>
           <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-          <p>
+          <p style="color: #003450;">
             <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-          <p>
+          <p style="color: #003450;">
             <i class="fas fa-envelope mr-3"></i> info@example.com</p>
-          <p>
+          <p style="color: #003450;">
             <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-          <p>
+          <p style="color: #003450;">
             <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
   
         </div>
@@ -134,8 +138,11 @@
     <!-- Footer Links -->
   
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
-      <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+    <div style="background-color: #f0f0f0; font-size: 14px; color: #003450;">
+    <div class="container">
+    <div class="footer-copyright text-right py-3">Created by GroupOne CodePlateau 3.0 © 2022, All Right reserved.
+    </div>
+    </div>
     </div>
     <!-- Copyright -->
   

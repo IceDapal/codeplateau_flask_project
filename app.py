@@ -1,13 +1,34 @@
 from crypt import methods
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for, redirect
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired 
+from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
 
 
+# Create a Flask Instance
 app = Flask(__name__)
+#Add Database
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+#Secret Key
 app.config['SECRET_KEY'] = "my super secret key"
+# Initialize The Database
+db = SQLAlchemy(app)
 
+
+# Create Model
+class Users(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(200), nullable=False)
+    email = db.Column(db.String(120), nullable=False, unique=True)
+    date_added = db.Column(db.DateTime, default=datetime.utcnow)
+
+    # Create A string
+    def __repr__(self):
+        return "name: {}: email: {}: date added{}".format(self.name, self.email, self.date_added)
+
+ 
 #Form Class
 class NamerForm(FlaskForm):
     name = StringField('Enter full name', validators=[DataRequired()])
